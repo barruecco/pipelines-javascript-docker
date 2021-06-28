@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: barrueccopipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: barrueccopipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: barrueccopipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: barrueccopipelinesjavascriptdocker 
+          image: barrueccoregistry.azurecr.io/barrueccopipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
